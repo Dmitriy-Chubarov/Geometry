@@ -19,6 +19,8 @@ void Rectangle::move(point_t point)
 {
 	p1.x += point.x - ((p2.x + p1.x) / 2);
 	p1.y += point.y - ((p2.y + p1.y) / 2);
+	p2.x += point.x - ((p2.x + p1.x) / 2);
+	p2.y += point.y - ((p2.y + p1.y) / 2);
 }
 
 void Rectangle::move(double x, double y)
@@ -31,8 +33,10 @@ void Rectangle::move(double x, double y)
 
 void Rectangle::scale(double coef)
 {
-
-	// TODO: Реализовать
+	p1.x -= (coef - 1) * (p2.x - p1.x) / 2;
+	p1.y -= (coef - 1) * (p2.y - p1.y) / 2;
+	p2.x += (coef - 1) * (p2.x - p1.x) / 2;
+	p2.y += (coef - 1) * (p2.y - p1.y) / 2;
 }
 
 std::string Rectangle::getName()

@@ -1,4 +1,8 @@
+#ifndef SHAPE
+#define SHAPE
+
 #include <string>
+#include <ostream>
 #include "base-types.h"
 
 class Shape
@@ -11,4 +15,8 @@ public:
 	virtual void scale(double coef) = 0;
 	virtual std::string getName() = 0;
 	virtual Shape* copy() = 0;
+	friend std::ostream& operator<<(std::ostream& out, Shape* shape);
+	bool operator<(Shape* shape);
 };
+
+#endif // !SHAPE

@@ -18,7 +18,8 @@ rectangle_t Rectrapezium::getFrameRect()
 
 void Rectrapezium::move(point_t point)
 {
-	// TODO: Реализовать
+	p.x = point.x - (bottom + top) / 4;
+	p.y = point.y - h / 2;
 }
 
 void Rectrapezium::move(double x, double y)
@@ -29,7 +30,11 @@ void Rectrapezium::move(double x, double y)
 
 void Rectrapezium::scale(double coef)
 {
-	// TODO: Реализовать
+	p.x -= (coef - 1) * (bottom + top) / 4;
+	p.y -= (coef - 1) * h / 2;
+	h *= coef;
+	bottom *= coef;
+	top *= coef;
 }
 
 std::string Rectrapezium::getName()

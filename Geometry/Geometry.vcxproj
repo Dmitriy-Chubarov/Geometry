@@ -127,17 +127,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Complex.cpp" />
+    <ClCompile Include="CompositeShape.cpp" />
     <ClCompile Include="Geometry.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Rectrapezium.cpp" />
+    <ClCompile Include="shape.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="base-types.h" />
-    <ClInclude Include="Complex.h" />
+    <ClInclude Include="CompositeShape.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Rectrapezium.h" />
     <ClInclude Include="shape.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="shapes.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

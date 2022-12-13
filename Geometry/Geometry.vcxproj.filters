@@ -24,7 +24,10 @@
     <ClCompile Include="Rectrapezium.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Complex.cpp">
+    <ClCompile Include="CompositeShape.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shape.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,8 +44,13 @@
     <ClInclude Include="Rectrapezium.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Complex.h">
+    <ClInclude Include="CompositeShape.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="shapes.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

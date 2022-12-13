@@ -1,12 +1,12 @@
 #include "shape.h"
-class Complex :
+class CompositeShape :
 	public Shape
 {
 private:
 	Shape** shapes;
 	int size;
 public:
-	Complex(int size, Shape** shapes);
+	CompositeShape(int size, Shape** shapes);
 	double getArea() override;
 	rectangle_t getFrameRect() override;
 	void move(point_t point) override;
@@ -15,4 +15,3 @@ public:
 	std::string getName() override;
 	Shape* copy() override;
 };
-
